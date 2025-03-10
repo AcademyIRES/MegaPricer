@@ -285,7 +285,7 @@ public class PricingService
                   thisTotalFeatureCost = featureCost * (1 + thisColorMarkup / 100);
                   subtotal += thisTotalFeatureCost;
                   subtotalFlat += featureCost;
-                  subtotalPlus = thisTotalFeatureCost * (1 + thisUserMarkup / 100);
+                  subtotalPlus += thisTotalFeatureCost * (1 + thisUserMarkup / 100);
                 }
               }
               if (refType == "Order")
@@ -345,7 +345,7 @@ public class PricingService
                 thisTotalPartCost = thisPartCost * (1 + thisColorMarkup / 100);
                 subtotal += thisTotalPartCost;
                 subtotalFlat += thisPartCost;
-                subtotalPlus = thisTotalPartCost * (1 + thisUserMarkup / 100);
+                subtotalPlus += thisTotalPartCost * (1 + thisUserMarkup / 100);
               }
             }
           }
