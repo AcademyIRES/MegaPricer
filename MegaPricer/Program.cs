@@ -1,4 +1,5 @@
 ﻿using MegaPricer.Data;
+using MegaPricer.Interfaces;
 using MegaPricer.Services;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -20,11 +21,18 @@ builder.Services.AddRazorPages(options =>
 
 // App Services
 builder.Services.AddScoped<IOrderDataService, SqliteOrderDataService>();
-builder.Services.AddScoped<IPricingService, PricingService>();
+builder.Services.AddScoped<PricingService>();
+builder.Services.AddScoped<IPricingService, PricingServiceDecorator>();
 builder.Services.AddScoped<IPriceCalculationStrategy, DefaultPriceCalculationStrategy>();
 builder.Services.AddScoped<PriceReportCalculationStrategy>();
 builder.Services.AddScoped<NewOrderPriceCalculationStrategy>();
 builder.Services.AddScoped<IGetUserMarkup, SqliteGetUserMarkupService>();
+builder.Services.AddScoped<IKitchenDataService, SqliteKitchenDataService>();
+builder.Services.AddScoped<IWallDataService, SqliteWallDataService>();
+builder.Services.AddScoped<ICabinetDataService, SqliteCabinetDataService>();
+builder.Services.AddScoped<IPartCostDataService, SqlitePartCostDataService>();
+builder.Services.AddScoped<IFeatureDataService, SqliteFeatureDataService>();
+builder.Services.AddScoped<IPartPricingService, SqlitePartPricingService>();
 
 var app = builder.Build();
 

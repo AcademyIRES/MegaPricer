@@ -1,6 +1,8 @@
 ﻿using MegaPricer.Data;
+using MegaPricer.Models;
+using Feature = MegaPricer.Models.Feature;
 
-namespace MegaPricer.Services;
+namespace MegaPricer.Interfaces;
 
 public interface IPriceCalculationStrategy
 {

@@ -1,6 +1,6 @@
-﻿namespace MegaPricer.Services;
+﻿namespace MegaPricer.Models;
 
-public record struct Feature
+public class Feature
 {
   public int FeatureId { get; set; }
   public int ColorId { get; set; }

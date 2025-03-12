@@ -1,6 +1,7 @@
 ﻿using Ardalis.Result;
+using MegaPricer.Models;
 
-namespace MegaPricer.Services;
+namespace MegaPricer.Interfaces;
 
 public interface IPricingService
 {
